@@ -1,0 +1,64 @@
+$fontFamily: Nunito
+$blue: #3294F8
+$baseTitle: #E7EDF4
+$baseSubtitle: #C4D4E3
+$baseText: #AFC2D4
+$baseSpan: #7B96B2
+$baseLabel: #3A536B
+$baseBorder: #1C2F41
+$basePost: #112131
+$baseProfile: #0B1B2B
+$baseBackground: #071422
+$baseInput: #040F1A
+
+body
+  margin: 0
+  background-color: #000000
+  color: $baseText
+  width: 100vw
+  display: flex
+  justify-content: center 
+  align-items: center 
+  font-family: $fontFamily
+  line-height: 160%
+
+  overflow-x: hidden
+
+.wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-bottom: 2rem
+  margin-top: -60rem
+
+input
+  -webkit-box-sizing: border-box
+  font-family: $fontFamily
+  font-size: 1rem
+  line-height: 160%
+  background-color: $baseInput
+  color: $baseText
+  border: 1px solid $baseBorder
+  border-radius: 6px
+  padding: 1rem .75rem
+  transition: border .4s ease-in-out
+
+  ::placeholder
+    color: $baseLabel
+
+  &:focus
+    outline: none
+    border: 1px solid $blue
+
+h1
+  color: $baseTitle
+
+p
+  color: $baseText
+
+a
+  color: $blue
+  text-decoration: none
+
+  &:hover
+    // text-decoration: underline

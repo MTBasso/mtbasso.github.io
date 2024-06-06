@@ -1,0 +1,64 @@
+@import "../../styles/default"
+  
+.post-container
+  display: flex
+  flex-direction: column
+  gap: 1rem
+
+  box-sizing: border-box
+  width: calc(50% - .5rem)
+  height: 260px
+  padding: 1.25rem 1.5rem
+
+  // background-color: $basePost
+  background-color: #0f172a
+
+
+  border-radius: 6px
+
+.post-header
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: baseline
+
+  h1
+    margin: 0
+    line-height: 1.2
+    overflow: hidden
+    word-break: break-word
+    white-space: normal
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+
+  span
+    height: fit-content
+    min-width: fit-content
+  
+.post-body
+  display: flex
+  text-align: start
+  min-width: 100%
+  overflow: hidden
+  flex-wrap: wrap
+  align-items: flex-start
+  align-content: center
+  height: calc(100% - 1rem)
+  p
+    line-height: 1.5
+    letter-spacing: -.6px
+    min-height: calc(100% - 1rem)
+    max-height: calc(100% - 1rem)
+
+    
+    min-width: 100% 
+
+    word-break: break-word
+    white-space: normal
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 6
+    -webkit-box-orient: vertical
+    overflow: hidden
