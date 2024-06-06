@@ -13,7 +13,7 @@ export function Post() {
   return (
     <div className="post-wrapper">
       <PostHeader issue={issue} />
-      <PostContent issue={issue} />
+      {issue.body ? <PostContent issue={issue} /> : null}
     </div>
   );
 }

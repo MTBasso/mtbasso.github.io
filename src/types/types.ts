@@ -6,6 +6,7 @@ export interface User {
   bio: string;
   company: string;
   followers: string;
+  email: string;
 }
 
 export interface Issue {

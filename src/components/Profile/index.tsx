@@ -1,5 +1,7 @@
-import { Buildings, GithubLogo, Share, Users } from 'phosphor-react';
 import './styles.sass';
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { User } from '../../types/types';
 
 type ProfileProps = {
@@ -7,33 +9,41 @@ type ProfileProps = {
 };
 
 export function Profile({ userInfo }: ProfileProps) {
+  const color = '#AFC2D4';
   return (
     <div className="profile-wrapper">
       <div className="profile-container">
         <img src={userInfo.avatar_url} alt="github profile icon" />
         <div className="content-wrapper">
           <div className="content">
-            <div className="name-github">
-              <h1>{userInfo.name}</h1>
-              <a className="open-on-github" href={userInfo.html_url}>
-                <span>
-                  GITHUB <Share size={20} weight="fill" />
-                </span>
-              </a>
-            </div>
+            <h1>{userInfo.name}</h1>
             {userInfo.bio}
           </div>
           <nav>
             <span>
-              <GithubLogo size={16} weight="fill" /> {userInfo.login}
+              <a href="https://www.linkedin.com/in/matheus-basso-5a2194223/">
+                <FontAwesomeIcon
+                  size="2x"
+                  icon={faLinkedin}
+                  style={{ color: color }}
+                />
+              </a>
             </span>
-            {userInfo.company ? (
-              <span>
-                <Buildings size={16} weight="fill" /> {userInfo.company}
-              </span>
-            ) : null}
             <span>
-              <Users size={16} weight="fill" /> {userInfo.followers} followers
+              <FontAwesomeIcon
+                size="2x"
+                icon={faGithubSquare}
+                style={{ color: color }}
+              />
+              <p>{userInfo.login}</p>
+            </span>
+            <span>
+              <FontAwesomeIcon
+                size="2x"
+                icon={faEnvelope}
+                style={{ color: color }}
+              />
+              <p>matheusbasso@protonmail.com</p>
             </span>
           </nav>
         </div>

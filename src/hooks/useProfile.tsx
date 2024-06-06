@@ -9,6 +9,7 @@ export const useProfile = (login: User['login']) => {
   async function fetchProfileData() {
     try {
       const response = await getUserProfile(login);
+      console.log(response);
       setProfileData(response);
     } catch {
       throw new Error();
