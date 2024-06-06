@@ -25,7 +25,7 @@ export function Profile({ userInfo }: ProfileProps) {
                 <FontAwesomeIcon
                   size="2x"
                   icon={faLinkedin}
-                  style={{ color: color }}
+                  style={{ color }}
                 />
               </a>
             </span>
@@ -33,16 +33,12 @@ export function Profile({ userInfo }: ProfileProps) {
               <FontAwesomeIcon
                 size="2x"
                 icon={faGithubSquare}
-                style={{ color: color }}
+                style={{ color }}
               />
               <p>{userInfo.login}</p>
             </span>
             <span>
-              <FontAwesomeIcon
-                size="2x"
-                icon={faEnvelope}
-                style={{ color: color }}
-              />
+              <FontAwesomeIcon size="2x" icon={faEnvelope} style={{ color }} />
               <p>matheusbasso@protonmail.com</p>
             </span>
           </nav>
