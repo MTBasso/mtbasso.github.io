@@ -22,7 +22,7 @@ export function Profile({ userInfo }: ProfileProps) {
           <nav className="user-links">
             <div className="link">
               <span>
-                <a href="https://www.linkedin.com/in/matheus-basso-5a2194223/">
+                <a href="https://www.linkedin.com/in/MTBasso/">
                   <FontAwesomeIcon
                     size="2x"
                     icon={faLinkedin}
