@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { App } from './App';
-import { CoverImage } from './assets/CoverImage';
 import { Home } from './pages/Home/';
 import { Post } from './pages/Post';
 
