@@ -1,12 +1,13 @@
-@import "../../styles/default"
+@import '../../styles/media-queries'
   
 .posts-wrapper 
   min-width: 100%
   display: flex
-  // flex-direction: row
   gap: 1rem
   flex-wrap: wrap
   align-items: center
   justify-content: space-between
   text-decoration: none
 
+  @include mobile
+    flex-direction: column

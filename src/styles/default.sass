@@ -1,57 +1,41 @@
-$fontFamily: Nunito
-$blue: #3294F8
-$baseTitle: #E7EDF4
-$baseSubtitle: #C4D4E3
-$baseText: #AFC2D4
-$baseSpan: #7B96B2
-$baseLabel: #3A536B
-$baseBorder: #1C2F41
-$basePost: #112131
-$baseProfile: #0B1B2B
-$baseBackground: #071422
-$baseInput: #040F1A
+@import './colors'
+@import './media-queries'
 
-$mainCard: #1e293b
-$secondaryCard: #0f172a
+$fontFamily: Nunito
+
+*
+  box-sizing: border-box
 
 body
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%)
+  background-size: 100%
+  background-repeat: no-repeat
   margin: 0
-  background-color: #000000
   color: $baseText
   width: 100vw
-  display: flex
-  justify-content: center 
-  align-items: center 
+  min-height: 100vh
+  height: 100%
   font-family: $fontFamily
   line-height: 160%
-
   overflow-x: hidden
+
+  @include mobile
+    overflow-x: hidden
+    height: 100%
 
 .wrapper
   display: flex
   justify-content: center
-  align-items: center
-  padding-bottom: 2rem
-  margin-top: -60rem
+  margin-top: 1rem
+  overflow-x: hidden
 
-input
-  -webkit-box-sizing: border-box
-  font-family: $fontFamily
-  font-size: 1rem
-  line-height: 160%
-  background-color: $baseInput
-  color: $baseText
-  border: 1px solid $baseBorder
-  border-radius: 6px
-  padding: 1rem .75rem
-  transition: border .4s ease-in-out
+  @include mobile
+    width: 100vw
+    padding: 1rem
+    margin-top: 0
 
-  ::placeholder
-    color: $baseLabel
-
-  &:focus
-    outline: none
-    border: 1px solid $blue
+span
+  color: $baseTitle
 
 h1
   color: $baseTitle
@@ -60,8 +44,5 @@ p
   color: $baseText
 
 a
-  color: $blue
+  color: $baseLink
   text-decoration: none
-
-  &:hover
-    // text-decoration: underline

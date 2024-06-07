@@ -9,7 +9,7 @@ type ProfileProps = {
 };
 
 export function Profile({ userInfo }: ProfileProps) {
-  const color = '#AFC2D4';
+  const color = '#d1d5db';
   return (
     <div className="profile-wrapper">
       <div className="profile-container">
@@ -19,24 +19,28 @@ export function Profile({ userInfo }: ProfileProps) {
             <h1>{userInfo.name}</h1>
             {userInfo.bio}
           </div>
-          <nav>
-            <span>
-              <a href="https://www.linkedin.com/in/matheus-basso-5a2194223/">
-                <FontAwesomeIcon
-                  size="2x"
-                  icon={faLinkedin}
-                  style={{ color }}
-                />
-              </a>
-            </span>
-            <span>
-              <FontAwesomeIcon
-                size="2x"
-                icon={faGithubSquare}
-                style={{ color }}
-              />
-              <p>{userInfo.login}</p>
-            </span>
+          <nav className="user-links">
+            <div className="link">
+              <span>
+                <a href="https://www.linkedin.com/in/matheus-basso-5a2194223/">
+                  <FontAwesomeIcon
+                    size="2x"
+                    icon={faLinkedin}
+                    style={{ color }}
+                  />
+                </a>
+              </span>
+              <span>
+                <a href={userInfo.html_url}>
+                  <FontAwesomeIcon
+                    size="2x"
+                    icon={faGithubSquare}
+                    style={{ color }}
+                  />
+                  <p>{userInfo.login}</p>
+                </a>
+              </span>
+            </div>
             <span>
               <FontAwesomeIcon size="2x" icon={faEnvelope} style={{ color }} />
               <p>matheusbasso@protonmail.com</p>

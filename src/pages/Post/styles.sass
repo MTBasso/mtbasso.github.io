@@ -1,12 +1,10 @@
-@import '../../styles/default'
-  
+@import '../../styles/media-queries'
+
 .post-wrapper
   width: 864px
   display: flex
   flex-direction: column
   gap: 1rem
 
-    
-    
-.testdiv 
-  border: 3px solid red
+  @include mobile
+    width: 100%
